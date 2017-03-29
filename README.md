@@ -4,7 +4,7 @@ Code used to reproduce [Magento2 issue #6803](https://github.com/magento/magento
 This plugin contains a task that when run, tries to assign an image to a simple product, and set media types on the image. Even with the [workaround plugin](https://github.com/DIE-KAVALLERIE/magento2-product-image-fix/blob/master/composer.json) the media types aren't set.
 
 The plugin uses this code to append an image to the product's image gallery and set media types
-``
+```
 $oProduct->addImageToMediaGallery($sMediaPath, ['image', 'small_image', 'thumbnail'], true, false);
 ```
 
