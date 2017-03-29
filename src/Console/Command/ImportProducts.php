@@ -31,7 +31,6 @@ class ImportProducts extends Command
         $_oProductFactory,
         $_oCategoryFactory,
         $_iProductCategoryId,
-        $_sImgPath,
         $_sMediaPath;
 
     public function __construct(
@@ -45,8 +44,6 @@ class ImportProducts extends Command
     ) {
         parent::__construct();
 
-        $sDataPath               = $oDirectoryList->getPath('app') . '/code/Bug/Demo/data';
-        $this->_sImgPath         = $sDataPath . '/images';
         $this->_sMediaPath       = $oDirectoryList->getPath('pub') . '/media';
         $this->_oState           = $oState;
         $this->_oProductRepo     = $oProductRepo;
@@ -93,7 +90,7 @@ class ImportProducts extends Command
         // @note Magento wants the images in the media path for import...
         $sMediaPath = $this->_sMediaPath . '/fake-product.jpg';
         copy(
-            $this->_sImgPath . '/fake-product.jpg',
+            __DIR__ . '/../../../data/images/fake-product.jpg',
             $sMediaPath);
 
         $oProduct->addImageToMediaGallery(
