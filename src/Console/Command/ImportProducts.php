@@ -98,7 +98,7 @@ class ImportProducts extends Command
 
         $this->_oProductRepo->save($oProduct);
 
-        echo "\n";
+        echo "Check the admin for media types on the image assigned to the Awesome product\n";
     }
 
     private function _getProductCategory($sCatName)
