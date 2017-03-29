@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- =============== -->
+  <!-- CLI Commands    -->
+  <!-- =============== -->
+  <type name="Magento\Framework\Console\CommandListInterface">
+    <arguments>
+      <argument name="commands" xsi:type="array">
+        <item name="bug-demo-products" xsi:type="object">Bug\Demo\Console\Command\ImportProducts</item>
+      </argument>
+    </arguments>
+  </type>
+</config>
